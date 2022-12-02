@@ -18,3 +18,6 @@ To-do-list - the second feature whereby the user store information of what are s
 Profile - the profile page shows an overall information of the user. It contains information such as a short description of him or herself, a link to the person's GitHub or portfolio, and personal information.
 
 Youtube link to video: 
+https://youtu.be/WOZJysaL9sI
+
+우수프로젝트 시상 프로그램에 지원합니다
