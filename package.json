@@ -1,0 +1,22 @@
+{
+  "name": "ossp-group-project",
+  "version": "1.0.0",
+  "description": "OSSP Group Project Assignment",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fatdzipanda/OSSP-Group-Project.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fatdzipanda/OSSP-Group-Project/issues"
+  },
+  "homepage": "https://github.com/fatdzipanda/OSSP-Group-Project#readme",
+  "dependencies": {
+    "bootstrap": "^5.2.3"
+  }
+}

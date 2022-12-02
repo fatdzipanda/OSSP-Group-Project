@@ -92,7 +92,7 @@ body{
     font-family: "Poppins", sans-serif;
 }
 
-.sidebar ul li .tooltip{
+.sidebar ul li .tooltips{
    position: absolute;
    height: 35px;
    left: 122px;
@@ -111,11 +111,11 @@ body{
    display: block;
 }
 
-.sidebar.active ul li .tooltip{
+.sidebar.active ul li .tooltips{
     display: none;
 }
 
-.sidebar ul li:hover .tooltip{
+.sidebar ul li:hover .tooltips{
     transition: all 0.5s ease;
     opacity: 1;
     top: 50%;
@@ -307,12 +307,209 @@ body{
     left: 240px;
 }
 
-.my-profile-sidebar-header-name{
-    color: white;
-    font-size: 50px;
+.my-profile-sidebar{
+    background: #121124;
+    height: 100%;
+    width: 200px;
+    padding: 6px 14px;
     font-family: 'Inter', sans-serif;
 }
 
+.my-profile-sidebar .my-profile-sidebar-content .my-profile-sidebar-header{
+    display: flex;
+    height: 50px;
+    width: 100%;
+    align-items: center;
+    color: white;
+}
+
+.my-profile-sidebar .my-profile-sidebar-content .my-profile-sidebar-header .my-profile-sidebar-header-name{
+    font-weight: bold;
+    font-size: 23px;
+}
+
+.my-profile-sidebar ul{
+    margin-top: 20px;
+}
+
+.my-profile-sidebar ul li{
+    font-family: 'Inter', sans-serif;
+    position: relative;
+    display: flex;
+    height: 50px;
+    width: 100%;
+    margin: 0 5px;
+    list-style: none;
+    line-height: 50px;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    border-radius: 12px;
+    transition: all 0.4s ease 0s;
+    white-space: nowrap;
+}
+
+.my-profile-sidebar ul li:hover{
+    background:rgba(255,255,255, 0.5);
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.my-profile-sidebar ul li i{
+    height: 50px;
+    min-width: 50px;
+    border-radius: 12px;
+    line-height: 50px;
+    text-align: center;
+}
+
+.content{
+    position: absolute;
+    height: 100%;
+    width: calc(100% - 318px);
+    left: 318px;
+    transition: all 0.5s ease;
+    color: white;
+    font-family: 'Inter', sans-serif;
+}
+
+.content .content-title{
+    align-items: center;
+    font-size: 50px;
+    color: white;
+    margin: 10px;
+    margin-left: 30px;
+    font-family: 'Inter', sans-serif;
+    word-break: break-word;
+}
+
+.content .content-title img{
+    margin: 10px;
+    margin-top: 50px;
+    height: 100px;
+    width: 100px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.content .content-title h3{
+    position: absolute;
+    left: 170px;
+    top: 60px;
+}
+
+.content .content-title p{
+    position: absolute;
+    font-size: 12pt;
+    left: 173px;
+    top: 135px;
+}
+
+.profile-wrapper{
+    margin: 20px auto;
+    margin-left: 40px;
+    margin-right: 30px;
+    background: white;
+    color: black;
+    border-radius: 12px;
+    padding: 25px 30px 30px 30px;
+}
+
+.profile-wrapper nav{
+    position: relative;
+    height: 50px;
+    width: 80%;
+    max-width: 400px;
+    display: flex;
+    align-items: center;
+}
+
+.profile-wrapper nav label{
+    display: block;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    line-height: 50px;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+}
+
+.profile-wrapper nav .slider{
+    position: absolute;
+    height: 100%;
+    width: 30%;
+    max-width: 400px;
+    border-radius: 5px;
+    background: #2AACC4;
+    z-index: 0;
+    left: 0;
+    bottom: 0;
+    transition: all 0.3s ease;
+}
+
+#All:checked ~ nav label.All{
+    color: white;
+}
+
+#Tasks:checked ~ nav label.Tasks{
+    color: white;
+}
+
+#Done:checked ~ nav label.Done{
+    color: white;
+}
+
+input[type="radio"]{
+    display: none;
+}
+
+#All:checked ~ nav .slider{
+    left: 2%;
+}
+
+#Tasks:checked ~ nav .slider{
+    left: 35.5%;
+}
+
+#Done:checked ~ nav .slider{
+    left: 68.5%;
+}
+
+section .title{
+    font-size: 20px;
+    font-weight: bold;
+    margin: 30px 0 10px 0;
+}
+
+.listing {
+    padding-bottom: 15px;
+    margin: 5px 0;
+    border-radius: 0;
+    background: #f7f7f7
+}
+
+.to-do-text{
+    padding-left: 10px;
+    
+
+}
+
+section .con{
+    display: none;
+}
+
+#All:checked ~ section .All-content{
+    display: block;
+}
+
+#Tasks:checked ~ section .links-content{
+    display: block;
+}
+
+#Done:checked ~ section .Done-content{
+    display: block;
+}
 
 @keyframes slide-up {
     0% {
@@ -335,3 +532,22 @@ body{
     width: calc(100% - 440px);
     left: 440px;
 }
+
+.nav-list ul li a{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    border-radius: 12px;
+    transition: all 0.4s ease 0s;
+    white-space: nowrap;
+}
+
+.nav-list ul li a:hover{
+    border-radius: 8px;
+    background: #2AACC4;
+    color: #121124;
+}
+
+
