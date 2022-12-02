@@ -276,6 +276,7 @@ body{
     position: absolute;
     height: 100%;
     width: calc(100% - 78px);
+    top : 33%;
     left: 78px;
     transition: all 0.5s ease;
 }
@@ -550,4 +551,35 @@ section .con{
     color: #121124;
 }
 
+.home-content-ori{
+    position: absolute;
+    height: 100%;
+    width: calc(100% - 78px);
+    left: 78px;
+    transition: all 0.5s ease;
+}
 
+.home-content-ori .text-ori{
+    align-items: center;
+    font-size: 50px;
+    color: white;
+    margin: 50px;
+    margin-top: 30px;
+    font-family: 'Inter', sans-serif;
+    word-break: break-word;
+    animation: slide-up 3s;
+}
+
+.home-content-ori .subtext-ori{
+    position: absolute;
+    top: 50px;
+    margin: 50px;
+    color: white;
+    font-family: 'Roboto Mono', monospace;
+    animation: fadeIn 5s;
+}
+
+.sidebar.active ~ .home-content-ori{
+    width: calc(100% - 240px);
+    left: 240px;
+}

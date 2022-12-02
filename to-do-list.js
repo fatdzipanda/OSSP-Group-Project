@@ -30,34 +30,53 @@ function saveTasks() {
 }
 
 function addToList(task) {
+    let div2 = document.createElement("div");
+    div2.className = "row g-3 listing";
     let div = document.createElement("div");
-    div.className = "task bg-light p-1 rounded-2 ps-2 d-flex align-items-center";
+    div.className = "col-sm-1";
+    div.style = "padding-left: 30px;";
+    div2.appendChild(div);
 
-    let span = document.createElement("span");
-    span.className = "me-auto";
-    span.textContent = task.text;
-    div.appendChild(span);
+    if (task.type === Type.Done) {
 
-    if (task.type === Type.Todo) {
-        let buttonUp = document.createElement("button");
-        buttonUp.className = "btn btn-sm btn-primary me-1";
-        buttonUp.innerHTML = '<i class="bi bi-arrow-up-short"></i>';
-        div.appendChild(buttonUp);
+        let check = document.createElement("input");
+        check.className = "form-check-input";
+        check.type = "checkbox";
+        div.appendChild(check);
 
-        buttonUp.addEventListener("click", () => {
-            let index = tasks.indexOf(task); 
-            if (index != 0){
-                [tasks[index], tasks[index+1]] = [tasks[index+1], tasks[index]];
-                saveTasks();
-            }
+        check.addEventListener("click", () => {
+            task.type = Type.Todo;
+            addToList(task);
+            div.remove();
+            done = done.filter(t => t !== task);
+            saveDone();
+            tasks.push(task);
+            saveTasks();
         });
 
-        let buttonDone = document.createElement("button");
-        buttonDone.className = "btn btn-sm btn-success me-1";
-        buttonDone.innerHTML = '<i class="bi bi-check"></i>';
-        div.appendChild(buttonDone);
+        let buttonRemove = document.createElement("button");
+        buttonRemove.className = "btn btn-sm btn-danger";
+        innerHTML = '<i class="bi bi-x"></i>';
+        div.appendChild(buttonRemove);
 
-        buttonDone.addEventListener("click", () => {
+        buttonRemove.addEventListener("click", () => {
+            div.remove();
+            if (task.type === Type.Done) {
+                done = done.filter(t => t !== task);
+                saveDone();
+            }
+            tasks = tasks.filter(t => t !== task);
+            saveTasks();
+
+        });
+    }
+    else {
+        let check = document.createElement("input");
+        check.className = "form-check-input";
+        check.type = "checkbox";
+        div.appendChild(check);
+
+        check.addEventListener("click", () => {
             task.type = Type.Done;
             addToList(task);
             div.remove();
@@ -65,24 +84,43 @@ function addToList(task) {
             saveTasks();
             done.push(task);
             saveDone();
+        }); 
+
+        let buttonRemove = document.createElement("button");
+        buttonRemove.className = "btn btn-sm btn-danger";
+        innerHTML = '<i class="bi bi-x"></i>';
+        div.appendChild(buttonRemove);
+
+        buttonRemove.addEventListener("click", () => {
+            div.remove();
+            if (task.type === Type.Done) {
+                done = done.filter(t => t !== task);
+                saveDone();
+            }
+            tasks = tasks.filter(t => t !== task);
+            saveTasks();
+
         });
     }
 
-    let buttonRemove = document.createElement("button");
-    buttonRemove.className = "btn btn-sm btn-danger";
-    buttonRemove.innerHTML = '<i class="bi bi-x"></i>';
-    div.appendChild(buttonRemove);
+    let due = document.createElement("div");
+    due.className = "col-sm-2";
+    div2.appendChild(due);    
 
-    buttonRemove.addEventListener("click", () => {
-        div.remove();
-        if (task.type === Type.Done) {
-            done = done.filter(t => t !== task);
-            saveDone();
-        }
-        tasks = tasks.filter(t => t !== task);
-        saveTasks();
+    let duein = document.createElement("span");
+    duein.className = "to-do-text";
+    duein.textContent = task.text;
+    due.appendChild(duein);
+    
+    let tasking = document.createElement("div");
+    tasking.className = "col-sm-9";
+    div2.appendChild(tasking);    
 
-    });
+    let taskin = document.createElement("span");
+    taskin.className = "to-do-text";
+    taskin.textContent = task.text2; 
+    tasking.appendChild(taskin);
+
 
     let list = document.querySelector(task.type === Type.Todo ? "#todo-list" : "#done-list");
     list.appendChild(div);
@@ -104,6 +142,7 @@ button.addEventListener("click", () => {
     // 2. Create a new Task object.
     let task = {
         text: text,
+        text2: text2,
         type: Type.Todo
     };
 

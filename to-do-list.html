@@ -82,14 +82,21 @@
         <div class="to-do-sidebar">
             <div class="to-do-sidebar-content">
                 <div class="to-do-sidebar-header">
-                    <div class="to-do-sidebar-header-name">
-                        To-Do List
+                    <div class="home-content-ori">
+                        <div class="text-ori">
+                        Job Application
+                        </div>
+                        <div class="subtext-ori">
+                            <p>Welcome to <mark class="color-it">취직 가즈아!</mark></p>
+                            <p>We help you manage your job applications for a brighter future.</p>
+                            <p>Explore your options with our <mark class="color-it">job application</mark> and <mark class="color-it">To-Do List</mark> features.</p>
+                        </div>
                     </div>
                 </div>
-                <div class="profile-wrapper jumbotron">
+                <div class="profile-wrapper jumbotron" style="margin-top: 300px;">
                     <div class="row g-3">
                         <div class="col-sm-1">
-                            <button class="btn btn-primary me-md-block"" type="button">Add</button>
+                            <button id="Add" class="btn btn-primary me-md-block"" type="button">Add</button>
                         </div>
                         <div class="col-sm-2">
                             <input type="text" class="form-control" placeholder="Due Date" aria-label="State">
@@ -119,10 +126,10 @@
                         </div>
                     </nav>
                     <section class="jumbotron">
-                        <div class="con All-content" style="margin-top: 10px;">
-                            <div class="row g-3 listing" id="to-do-task">
+                        <div id="todo-list" class="con All-content" style="margin-top: 10px;">
+                            <div class="row g-3 listing" >
                                 <div class="col-sm-1" style="padding-left: 30px;" >
-                                    <input class="form-check-input" type="checkbox" value=">
+                                    <input class="form-check-input" type="checkbox" value="">
                                 </div>
                                 <div class="col-sm-2">
                                     <span class="to-do-text">Date</span>
@@ -130,20 +137,9 @@
                                 <div class="col-sm-9">
                                     <span class="to-do-text">Work on wordpress</span>
                                 </div>
-                            </div>
-                            <div class="row g-3 listing" id="to-do-task">
-                                <div class="col-sm-1" style="padding-left: 30px;">
-                                    <input class="form-check-input" type="checkbox" value=">
-                                </div>
-                                <div class="col-sm-2">
-                                    <span class="to-do-text">Date</span>
-                                </div>
-                                <div class="col-sm-9">
-                                    <span class="to-do-text">Work on wordpress</span>
-                                </div>
-                            </div>                         
+                            </div>                        
                         </div>
-                        <div class="con links-content" style="margin-top: 10px;">
+                        <div id="todo-list" class="con links-content" style="margin-top: 10px;">
                             <div class="row g-3 listing" id="to-do-task">
                                 <div class="col-sm-1" style="padding-left: 30px;">
                                     <input class="form-check-input" type="checkbox" value=">
@@ -156,7 +152,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="con Done-content" style="margin-top: 10px;">
+                        <div id ="#done-list" class="con Done-content" style="margin-top: 10px;">
                             <div class="row g-3 listing" id="to-do-task">
                                 <div class="col-sm-1" style="padding-left: 30px;">
                                     <input class="form-check-input" type="checkbox" value=">
@@ -186,5 +182,6 @@
 
         
     </script>
+    
 </body>
 </html>
