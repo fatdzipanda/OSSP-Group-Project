@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OSSP Project</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="job-application.css" rel="stylesheet">
+</head>
+<body>
+    <div class="sidebar">
+        <div class="sidebar-content">
+            <div class="sidebar-header">
+                <i class='bx bxs-briefcase-alt-2'></i>
+                <div class="sidebar-header-name">
+                    취직 가즈아!
+                </div>
+            </div>
+            <i class='bx bx-menu' id="menu-btn"></i>
+            <ul class="nav-list">
+                <li>
+                        <i class='bx bx-search-alt' id='search-icon'></i>
+                        <input id="search-bar" type="text" placeholder="Search...">
+                </li>
+                <li>
+                    <a href="index.html">
+                        <i class='bx bxs-home'></i>
+                        <span class="links_name">Home</span>
+                    </a>
+                    <span class="tooltip">Home</span>
+                </li>
+                <li>
+                    <a href="job-application.html">
+                        <i class='bx bx-list-ul'></i>
+                        <span class="links_name">My Jobs</span>
+                    </a>
+                    <span class="tooltip">Job Application</span>
+                </li>
+                <li>
+                    <a href="to-do-list.html">
+                        <i class='bx bx-list-check'></i>
+                        <span class="links_name">To-Do List</span>
+                    </a>
+                    <span class="tooltip">To-Do List</span>
+                </li>
+                <li>
+                    <a href="profile.html">
+                        <i class='bx bxs-user-circle'></i>
+                        <span class="links_name">My Profile</span>
+                    </a>
+                    <span class="tooltip">My Profile</span>
+                </li>
+            </ul>
+            <div class="profile-content">
+                <div class="profile">
+                    <div class="profile-details">
+                        <img src="profile.jpg" alt="">
+                        <div class="name-job">
+                            <div class="profile-name">Hong Gil Dong</div>
+                            <div class="profile-job">SKKU Student</div>
+                        </div>
+                    </div>
+                    <i class='bx bx-log-out' id="log-out"></i>
+                </div>
+            </div>
+        </div>
+    </div>    
+
+    <div class="profile-sidebar">
+        <!-- <div class="text">
+        Real-Time, Responsible, Responsive.
+        </div>
+        <div class="subtext">
+            <p>Welcome to <mark class="color-it">취직 가즈아!</mark></p>
+            <p>We help you manage your job applications for a brighter future.</p>
+            <p>Explore your options with our <mark class="color-it">job application</mark> and <mark class="color-it">To-Do List</mark> features.</p>
+        </div> -->
+        <div class="my-profile-sidebar">
+            <div class="my-profile-sidebar-content">
+                <div class="my-profile-sidebar-header">
+                    <div class="my-profile-sidebar-header-name">
+                        Job Application
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        let btn = document.querySelector("#menu-btn");
+        let sidebar = document.querySelector(".sidebar");
+        let searchBtn = document.querySelector(".bx-search-alt");
+        
+        btn.onclick = function() {
+            sidebar.classList.toggle("active");
+        }
+    </script>
+</body>
+</html>
