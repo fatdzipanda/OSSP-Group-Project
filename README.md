@@ -3,11 +3,11 @@ OSSP Group Project Assignment
 
 Name of application: 취직 가즈아!
 
-![image](<img width="526" alt="KakaoTalk_20221202_234310504" src="https://user-images.githubusercontent.com/91307768/205318649-19d85d74-d606-4ceb-9772-0232ad2ec369.png">)
-![image](<img width="503" alt="KakaoTalk_20221202_234316627" src="https://user-images.githubusercontent.com/91307768/205318699-75987dcf-dbb4-4a39-9c6a-0aef762af8ab.png">)
-![image](<img width="559" alt="KakaoTalk_20221202_234323387" src="https://user-images.githubusercontent.com/91307768/205318734-4a481d3c-840c-4862-b399-9e018fa87dfb.png">)
-![image](<img width="596" alt="KakaoTalk_20221202_234336371" src="https://user-images.githubusercontent.com/91307768/205318767-e850f103-57e0-4dc4-a9a8-cdf7d287dc78.png">)
-![image](<img width="586" alt="KakaoTalk_20221202_234510233" src="https://user-images.githubusercontent.com/91307768/205318925-ceca8add-7f34-478d-aad9-620e6b813b4e.png">">)
+<img width="526" alt="KakaoTalk_20221202_234310504" src="https://user-images.githubusercontent.com/91307768/205318649-19d85d74-d606-4ceb-9772-0232ad2ec369.png">
+<img width="503" alt="KakaoTalk_20221202_234316627" src="https://user-images.githubusercontent.com/91307768/205318699-75987dcf-dbb4-4a39-9c6a-0aef762af8ab.png">
+<img width="559" alt="KakaoTalk_20221202_234323387" src="https://user-images.githubusercontent.com/91307768/205318734-4a481d3c-840c-4862-b399-9e018fa87dfb.png">
+<img width="596" alt="KakaoTalk_20221202_234336371" src="https://user-images.githubusercontent.com/91307768/205318767-e850f103-57e0-4dc4-a9a8-cdf7d287dc78.png">
+<img width="586" alt="KakaoTalk_20221202_234510233" src="https://user-images.githubusercontent.com/91307768/205319229-98aa6581-fdf8-41f7-a6fd-7700a121260b.png">
 
 Home - the home page gives an overview of what our webpage is about and its two main features
 
