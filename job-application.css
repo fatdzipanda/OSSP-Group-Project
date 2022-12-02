@@ -7,6 +7,84 @@
     box-sizing: border-box;
 }
 
+.button1 {
+  margin-right: 20px;
+  font-size: 20px;
+  padding: 10px;
+}
+
+.btn btn-danger {
+  font-size: 20px;
+  padding: 5px;
+}
+
+.input1 {
+  list-style:none;
+  text-align:left;
+  font-size: 20px;
+  padding:20px 0;
+}
+
+.input2 {
+  display:inline;
+  text-transform:uppercase;
+  padding-right: 180px;
+}
+
+.input3 {
+  list-style:none;
+  text-align:left;
+  font-size: 20px;
+  padding:20px 0;
+}
+
+.input4 {
+  display:inline;
+  text-transform:uppercase;
+  padding-right: 60px;
+  padding-left: 10px;
+}
+
+.input5 {
+  display:inline;
+  text-transform:uppercase;
+  padding-right: 80px;
+}
+
+#size {
+  width: 160px;
+}
+
+.input6 {
+  display:inline;
+  text-transform:uppercase;
+  padding-right: 100px;
+}
+
+.input7 {
+  display:inline;
+  text-transform:uppercase;
+  padding-right: 100px;
+}
+
+.input8 {
+  display:inline;
+  text-transform:uppercase;
+  padding-right: 40px;
+}
+
+.input9 {
+  display:inline;
+  text-transform:uppercase;
+  padding-right: 0px;
+}
+
+.input10 {
+  display:inline;
+  text-transform:uppercase;
+  padding-right: 120px;
+}
+
 body{
     position: relative;
     min-height: 100vh;
@@ -259,7 +337,7 @@ body{
     line-height: 50px;
     font-size: 20px;
     border-radius: 12px;
-    text-align: center; 
+    text-align: center;
     transition: all 0.4s ease;
     background: #332b5a;
 }

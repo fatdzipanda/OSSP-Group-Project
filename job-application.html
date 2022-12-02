@@ -7,6 +7,7 @@
     <title>OSSP Project</title>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link href="job-application.css" rel="stylesheet">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 <body>
     <div class="sidebar">
@@ -65,7 +66,7 @@
                 </div>
             </div>
         </div>
-    </div>    
+    </div>
 
     <div class="profile-sidebar">
         <!-- <div class="text">
@@ -80,21 +81,71 @@
             <div class="my-profile-sidebar-content">
                 <div class="my-profile-sidebar-header">
                     <div class="my-profile-sidebar-header-name">
-                        Job Application
+                        <p>Which company are we contacting today?</p>
+                        <br></br>
+                        <p style="font-size:50px">Job Application</p>
+                        <button class="button1" type="button" id="rowAdder" type="button">Add</button>
+                        <ul class="input1">
+                           <li class="input2">Company Name</li>
+                           <li class="input2">Stage</li>
+                           <li class="input2">Postion</li>
+                           <li class="input10">Due Date</li>
+                           <li class="input2">URL</li>
+                           <li class="input2">Notes</li>
+                        </ul>
+                        <div class="input3" id="input">
+                           <div class="input4"><input type="text" size="35"></div>
+                           <div class="input5">
+                            <select id="size">
+                              <option></option>
+                              <option>Applied</option>
+                              <option>Interview</option>
+                              <option>Test</option>
+                              <option>Accepted</option>
+                              <option>Rejected</option>
+                            </select>
+                          </div>
+                           <div class="input6"><input type="text"></div>
+                           <div class="input7"><input type="date"></div>
+                           <div class="input8"><input type="text"></div>
+                           <div class="input9"><input type="text" size="35"></div>
+                        </div>
+                        <button type="button" class="btn btn-danger" id="DeleteRow"><i class="bi bi-trash"></i>Delete</button>
+                        <div id="newinput"></div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    
+
     <script>
         let btn = document.querySelector("#menu-btn");
         let sidebar = document.querySelector(".sidebar");
         let searchBtn = document.querySelector(".bx-search-alt");
-        
+
         btn.onclick = function() {
             sidebar.classList.toggle("active");
         }
     </script>
+
+    <script type="text/javascript">
+
+      $("#rowAdder").click(function () {
+          newRowAdd =
+          '<div id="input">'+
+          '<div class="input4"></div>'+'<div class="input5"></div>'+
+          '<div class="input6"></div>'+'<div class="input7"></div>'+
+          '<div class="input8"></div>'+'<div class="input9"></div>'+
+          '<button class="btn btn-danger" id="DeleteRow" type="button">' +
+          '<i class="bi bi-trash"></i>Delete</button> </div>';
+
+          $('#newinput').append(newRowAdd);
+      });
+
+      $("body").on("click", "#DeleteRow", function () {
+            $(this).parents("#input").remove();
+      })
+    </script>
+
 </body>
 </html>
